@@ -19,4 +19,25 @@ XCUITest allows for functional testing of the application. Visual testing is not
 
 
 5) Device farm
-Considering the complexity of the application to test, we may decide to use a device farm to ensure visual compliance across multiple physical devices. We can propose to use simulators only in the case of a simple app that is unlikely to be using multiple OS layers that would require a physical device.
+Considering the complexity of the application to test, we may decide to use a device farm to ensure visual compliance across multiple physical devices. We can propose to use simulators only in the case of a simple app that is unlikely to be using multiple OS layers that would require a physical device. E.g., no video streaming requirement or network calls, app can run without an internet connect.
+
+
+Test Automation Strategy
+
+Functional testing 
+1) Identifying core journeys
+
+
+2) Defining must have tests
+
+
+3) Define could have tests
+
+
+
+
+Performance testing
+
+
+Platform testing
+4) Devices to support and run the tests on - We carried out an assessment of the app and decided that we can use simulators to functionally test the app. 
