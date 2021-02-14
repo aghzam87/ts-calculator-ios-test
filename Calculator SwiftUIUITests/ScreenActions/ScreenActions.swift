@@ -17,4 +17,39 @@ extension ElementHandler where ElementType: ElementFinder {
         uiElement.xcuielement.tap()
     }
     
+    private func keyPress(firstNumber: Double, secondNumber: Double, operatorElement: XCUIElement, timeout: TimeInterval = 5) {
+        enterNumber(firstNumber)
+        operatorElement.tap()
+        enterNumber(secondNumber)
+    }
+    
+    private func enterNumber(_ number: Double) {
+        for i in String(number) {
+            XCUIApplication().buttons[String(i)].tap()
+        }
+    }
+    
+    func addNumber(_ firstNumber: Double, _ secondNumber: Double) -> String {
+        let uiOperatorElement = Screen.mainScreen.uielement(.addButton).element.xcuielement
+        keyPress(firstNumber: firstNumber, secondNumber: secondNumber, operatorElement: uiOperatorElement)
+        return String(firstNumber + secondNumber)
+    }
+    
+    func subtractNumber(_ firstNumber: Double, _ secondNumber: Double) -> String {
+        let uiOperatorElement = Screen.mainScreen.uielement(.subButton).element.xcuielement
+        keyPress(firstNumber: firstNumber, secondNumber: secondNumber, operatorElement: uiOperatorElement )
+        return String(firstNumber - secondNumber)
+    }
+    
+    func multiplyNumber(_ firstNumber: Double, _ secondNumber: Double) -> String {
+        let uiOperatorElement = Screen.mainScreen.uielement(.multiplyButton).element.xcuielement
+        keyPress(firstNumber: firstNumber, secondNumber: secondNumber, operatorElement: uiOperatorElement )
+        return String(firstNumber * secondNumber)
+    }
+    
+    func divideNumber(_ firstNumber: Double, _ secondNumber: Double) -> String {
+        let uiOperatorElement = Screen.mainScreen.uielement(.divideButton).element.xcuielement
+        keyPress(firstNumber: firstNumber, secondNumber: secondNumber, operatorElement: uiOperatorElement )
+        return String(firstNumber / secondNumber)
+    }
 }
