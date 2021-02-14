@@ -61,6 +61,8 @@
 		AE23399925D09521000E9240 /* Screens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screens.swift; sourceTree = "<group>"; };
 		AE2339A325D095FD000E9240 /* ScreenActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenActions.swift; sourceTree = "<group>"; };
 		AE2339AB25D0AD6F000E9240 /* ScreenChecks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenChecks.swift; sourceTree = "<group>"; };
+		AE57905325D988C8009089F5 /* Calculator SwiftUI.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Calculator SwiftUI.xctestplan"; path = "Calculator SwiftUI.xcodeproj/Calculator SwiftUI.xctestplan"; sourceTree = SOURCE_ROOT; };
+		AE57905725D989A9009089F5 /* PeformanceTest.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = file; path = PeformanceTest.xctestplan; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +164,8 @@
 		AE23398725D08E72000E9240 /* TestCases */ = {
 			isa = PBXGroup;
 			children = (
+				AE57905725D989A9009089F5 /* PeformanceTest.xctestplan */,
+				AE57905325D988C8009089F5 /* Calculator SwiftUI.xctestplan */,
 				59CF9D1D25B0342500DBFEA7 /* BaseTestCase.swift */,
 				AE23397025D08D72000E9240 /* FunctionalTests.swift */,
 				AE23396B25D08D46000E9240 /* PerformanceTests.swift */,

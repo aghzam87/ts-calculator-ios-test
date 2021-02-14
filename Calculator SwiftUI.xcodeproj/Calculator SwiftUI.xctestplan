@@ -1,0 +1,29 @@
+{
+  "configurations" : [
+    {
+      "id" : "6B718D94-7804-4614-A276-85452F835B8E",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "skippedTests" : [
+        "BaseTestCase",
+        "PerformanceTests"
+      ],
+      "target" : {
+        "containerPath" : "container:Calculator SwiftUI.xcodeproj",
+        "identifier" : "59CF9D1825B0342500DBFEA7",
+        "name" : "Calculator SwiftUIUITests"
+      }
+    }
+  ],
+  "version" : 1
+}
