@@ -38,7 +38,21 @@ class FunctionalTests: BaseTestCase {
     
     func testSubTwoNumbers() {
         Given("app launches") { app.launch() }
-        When("user adds two numbers") { resultLabel = Screen.mainScreen.subtractNumber(7,10) }
+        When("user subtracts two numbers") { resultLabel = Screen.mainScreen.subtractNumber(7,10) }
+        And("user taps equal") { Screen.mainScreen.tap(.equalButton) }
+        Then("the result label display the correct answer") { Screen.mainScreen.resultHasLabel(resultLabel) }
+    }
+    
+    func testMultiplyTwoNumbers() {
+        Given("app launches") { app.launch() }
+        When("user multiplies two numbers") { resultLabel = Screen.mainScreen.multiplyNumber(7,10) }
+        And("user taps equal") { Screen.mainScreen.tap(.equalButton) }
+        Then("the result label display the correct answer") { Screen.mainScreen.resultHasLabel(resultLabel) }
+    }
+    
+    func testDivideTwoNumbers() {
+        Given("app launches") { app.launch() }
+        When("user multiplies two numbers") { resultLabel = Screen.mainScreen.divideNumber(25,2.5) }
         And("user taps equal") { Screen.mainScreen.tap(.equalButton) }
         Then("the result label display the correct answer") { Screen.mainScreen.resultHasLabel(resultLabel) }
     }
