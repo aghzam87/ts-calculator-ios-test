@@ -11,6 +11,10 @@ class FunctionalTests: BaseTestCase {
     
     var resultLabel: String = "CXTS"
     
+    let testData = [
+        [10, 20], [30, 40], [-9, 3], [25.0, 12.5]
+    ]
+    
     // Smoke test app launches
     func testAppLaunch() {
         app.launch()
@@ -55,5 +59,15 @@ class FunctionalTests: BaseTestCase {
         When("user multiplies two numbers") { resultLabel = Screen.mainScreen.divideNumber(25,2.5) }
         And("user taps equal") { Screen.mainScreen.tap(.equalButton) }
         Then("the result label display the correct answer") { Screen.mainScreen.resultHasLabel(resultLabel) }
+    }
+    
+    // Test with a list of test data, we can do this iteration for all other operations
+    func testSubTwoNumbersWithDataSet() {
+        Given("app launches") { app.launch() }
+        for testData in self.testData {
+            When("user subtracts two numbers") { resultLabel = Screen.mainScreen.subtractNumber(testData[0], testData[1]) }
+            And("user taps equal") { Screen.mainScreen.tap(.equalButton) }
+            Then("the result label display the correct answer") { Screen.mainScreen.resultHasLabel(resultLabel) }
+        }
     }
 }

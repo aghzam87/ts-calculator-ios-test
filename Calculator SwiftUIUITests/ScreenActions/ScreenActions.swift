@@ -25,7 +25,12 @@ extension ElementHandler where ElementType: ElementFinder {
     
     private func enterNumber(_ number: Double) {
         for i in String(number) {
-            XCUIApplication().buttons[String(i)].tap()
+            // handle "-" character
+            if i == "-" {
+                XCUIApplication().buttons["−"].tap()
+            } else {
+                XCUIApplication().buttons[String(i)].tap()
+            }
         }
     }
     
